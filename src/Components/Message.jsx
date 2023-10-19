@@ -2,7 +2,7 @@ const Message = () => {
     return (
         <div className="my-20">
             <h2 className="text-3xl text-[#1F4172] text-center font-semibold mb-6">Message From The Owner</h2>
-            <div className="hero min-h-screen bg-[#D2E0FB]">
+            <div className="hero min-h-screen bg-[#8EACCD]">
                 <div className="hero-content flex-col lg:flex-row">
                     <img src="https://i.ibb.co/FV59G4t/message.jpg" className="max-w-sm rounded-lg shadow-2xl" />
                     <div>
