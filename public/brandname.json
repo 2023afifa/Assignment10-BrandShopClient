@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "brandName": "Gucci",
+        "brandImage": "https://i.ibb.co/w72P5Xg/brand1.jpg"
+    },
+    {
+        "id": 2,
+        "brandName": "Prada",
+        "brandImage": "https://i.ibb.co/hBzmQdT/brand2.jpg"
+    },
+    {
+        "id": 3,
+        "brandName": "Louis Vuitton",
+        "brandImage": "https://i.ibb.co/rQ6btKD/brand3.jpg"
+    },
+    {
+        "id": 4,
+        "brandName": "Chanel",
+        "brandImage": "https://i.ibb.co/9vqnvSb/brand4.jpg"
+    },
+    {
+        "id": 5,
+        "brandName": "Versace",
+        "brandImage": "https://i.ibb.co/VYS63HT/brand5.jpg"
+    },
+    {
+        "id": 6,
+        "brandName": "Dior",
+        "brandImage": "https://i.ibb.co/6vSd44y/brand6.jpg"
+    }
+]

@@ -1,10 +1,14 @@
+import Banner from "./Banner";
+import BrandCards from "./BrandCards";
 import Navbar from "./Navbar";
 
 const Home = () => {
     return (
         <div>
-            <div className="w-[1400px] mx-auto my-5">
+            <div className="lg:w-[1350px] mx-auto my-5">
                 <Navbar></Navbar>
+                <Banner></Banner>
+                <BrandCards></BrandCards>
             </div>
         </div>
     );
