@@ -1,6 +1,7 @@
 import Banner from "./Banner";
 import BrandCards from "./BrandCards";
 import Navbar from "./Navbar";
+import Sale from "./Sale";
 
 const Home = () => {
     return (
@@ -9,6 +10,7 @@ const Home = () => {
                 <Navbar></Navbar>
                 <Banner></Banner>
                 <BrandCards></BrandCards>
+                <Sale></Sale>
             </div>
         </div>
     );

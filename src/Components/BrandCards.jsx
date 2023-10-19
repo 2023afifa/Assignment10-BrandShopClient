@@ -12,8 +12,8 @@ const BrandCards = () => {
 
     return (
         <div>
-            <div className="my-16">
-                <h3 className="text-3xl text-center font-semibold mb-10">Brands</h3>
+            <div className="mt-16">
+                <h3 className="text-3xl text-[#1F4172] text-center font-semibold mb-6">Brands</h3>
                 <div className="grid lg:grid-cols-3 gap-10">
                     {
                         cards.map(card => <BrandCard key={card.id} card={card}></BrandCard>)
