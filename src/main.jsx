@@ -5,6 +5,11 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorElement from './ErrorElement/ErrorElement.jsx';
 import Home from './Components/Home.jsx';
+import AddProduct from './Components/AddProduct.jsx';
+import AddCards from './Components/AddCards.jsx';
+import Login from './Components/Login.jsx';
+import Register from './Components/Register.jsx';
+import AuthProvider from './Provider/AuthProvider.jsx';
 
 
 const router = createBrowserRouter([
@@ -12,15 +17,28 @@ const router = createBrowserRouter([
     path: "/",
     errorElement: <ErrorElement></ErrorElement>,
     element: <App></App>,
+    loader: () => fetch("http://localhost:5000/brands"),
     children: [
       {
         path: "/",
         element: <Home></Home>,
-        // loader: 
+      },
+      {
+        path: "/brands/:brand",
+        element: <AddCards></AddCards>,
+        loader: () => fetch("http://localhost:5000/brands"),
       },
       {
         path: "/addproduct",
-        // element: 
+        element: <AddProduct></AddProduct>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
       }
     ]
   },
@@ -28,6 +46,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
