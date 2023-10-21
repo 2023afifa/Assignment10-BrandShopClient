@@ -8,8 +8,24 @@ const Details = () => {
     const { id } = useParams();
     const card = cards.find(card => card._id == id);
 
-    const handleAddCart = () => {
-        toast("Add");
+    const handleAddCart = ( photo, name, price) => {
+        const newProduct = { photo, name, price };
+        console.log(newProduct);
+
+        fetch("http://localhost:5000/cart", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(newProduct)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    toast("Added to cart successfully");
+                }
+            })
     }
 
     return (
@@ -22,9 +38,9 @@ const Details = () => {
                     <p><span className="font-semibold text-lg">Product Name: </span>{card.name}</p>
                     <p><span className="font-semibold text-lg">Description: </span>{card.description}</p>
                     <p><span className="font-semibold text-lg">Type: </span>{card.type}</p>
-                    <p><span className="font-semibold text-lg">Price: </span>{card.price}</p>
+                    <p><span className="font-semibold text-lg">Price: $</span>{card.price}</p>
                     <p><span className="font-semibold text-lg">Rating: </span>{card.rating}</p>
-                    <button onClick={handleAddCart} className="btn bg-[#8EACCD] text-white mt-5">Add To Cart</button>
+                    <button onClick={() => handleAddCart(card.photo, card.name, card.price)} className="btn bg-[#8EACCD] text-white mt-5">Add To Cart</button>
                 </div>
             </div>
             <ToastContainer />

@@ -11,6 +11,7 @@ import Login from './Components/Login.jsx';
 import Register from './Components/Register.jsx';
 import AuthProvider from './Provider/AuthProvider.jsx';
 import Details from './Components/Details.jsx';
+import MyCart from './Components/MyCart.jsx';
 // import Gucci from './Components/Gucci.jsx';
 // import Prada from './Components/Prada.jsx';
 // import LV from './Components/LV.jsx';
@@ -38,6 +39,11 @@ const router = createBrowserRouter([
         path: "/:id",
         element: <Details></Details>,
         loader: () => fetch("http://localhost:5000/brands"),
+      },
+      {
+        path: "/mycart",
+        element: <MyCart></MyCart>,
+        loader: () => fetch("http://localhost:5000/cart"),
       },
       // {
       //   path: "/brands/:brand",
