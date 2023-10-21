@@ -12,7 +12,7 @@ const Details = () => {
         const newProduct = { photo, name, price };
         console.log(newProduct);
 
-        fetch("http://localhost:5000/cart", {
+        fetch("https://brand-server-2rimsyl36-afifas-projects.vercel.app/cart", {
             method: "POST",
             headers: {
                 "content-type": "application/json"

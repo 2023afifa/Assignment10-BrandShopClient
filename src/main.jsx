@@ -29,22 +29,22 @@ const router = createBrowserRouter([
       {
         path: "/brands/:brand",
         element: <AddCards></AddCards>,
-        loader: () => fetch("http://localhost:5000/brands"),
+        loader: () => fetch("https://brand-server-2rimsyl36-afifas-projects.vercel.app/brands"),
       },
       {
         path: "/:id",
         element: <PrivateRoute><Details></Details></PrivateRoute>,
-        loader: () => fetch("http://localhost:5000/brands"),
+        loader: () => fetch("https://brand-server-2rimsyl36-afifas-projects.vercel.app/brands"),
       },
       {
         path: "/update/:id",
         element: <PrivateRoute><Update></Update></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/brands/${params.id}`),
+        loader: ({ params }) => fetch(`https://brand-server-2rimsyl36-afifas-projects.vercel.app/brands/${params.id}`),
       },
       {
         path: "/mycart",
         element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-        loader: () => fetch("http://localhost:5000/cart"),
+        loader: () => fetch("https://brand-server-2rimsyl36-afifas-projects.vercel.app/cart"),
       },
       {
         path: "/addproduct",

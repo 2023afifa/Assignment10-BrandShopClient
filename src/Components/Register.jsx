@@ -48,7 +48,7 @@ const Register = () => {
                     })
                     .catch()
                 const user = { email };
-                fetch("http://localhost:5000/user", {
+                fetch("https://brand-server-2rimsyl36-afifas-projects.vercel.app/user", {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"

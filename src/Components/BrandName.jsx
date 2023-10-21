@@ -8,7 +8,7 @@ const BrandName = () => {
 
         const newBrandName = { brandname, image };
 
-        fetch("http://localhost:5000/brands", {
+        fetch("https://brand-server-2rimsyl36-afifas-projects.vercel.app/brands", {
             method: "POST",
             headers: {
                 "content-type": "application/json"
