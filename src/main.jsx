@@ -10,7 +10,8 @@ import AddCards from './Components/AddCards.jsx';
 import Login from './Components/Login.jsx';
 import Register from './Components/Register.jsx';
 import AuthProvider from './Provider/AuthProvider.jsx';
-import Gucci from './Components/Gucci.jsx';
+import Details from './Components/Details.jsx';
+// import Gucci from './Components/Gucci.jsx';
 // import Prada from './Components/Prada.jsx';
 // import LV from './Components/LV.jsx';
 // import Chanel from './Components/Chanel.jsx';
@@ -31,6 +32,11 @@ const router = createBrowserRouter([
       {
         path: "/brands/:brand",
         element: <AddCards></AddCards>,
+        loader: () => fetch("http://localhost:5000/brands"),
+      },
+      {
+        path: "/:id",
+        element: <Details></Details>,
         loader: () => fetch("http://localhost:5000/brands"),
       },
       // {
