@@ -47,6 +47,20 @@ const Register = () => {
                         console.log("Profile updated");
                     })
                     .catch()
+                const user = { email };
+                fetch("http://localhost:5000/user", {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    },
+                    body: JSON.stringify(user)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.insertedId) {
+                            console.log("User added to database");
+                        }
+                    })
             })
             .catch(error => {
                 console.error(error);

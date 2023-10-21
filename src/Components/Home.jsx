@@ -5,6 +5,7 @@ import Message from "./Message";
 import Navbar from "./Navbar";
 import Sale from "./Sale";
 
+
 const Home = () => {
     return (
         <div>
