@@ -32,8 +32,8 @@ const Details = () => {
         <div>
             <Navbar></Navbar>
             <h2 className="text-3xl text-center font-semibold my-10">Product Details</h2>
-            <div className="flex gap-6 mx-10">
-                <img src={card.photo} alt="" className="w-2/5 rounded-lg" />
+            <div className="flex flex-col lg:flex-row gap-6 mx-5 lg:mx-10">
+                <img src={card.photo} alt="" className="lg:w-2/5 rounded-lg" />
                 <div className="mt-10">
                     <p><span className="font-semibold text-lg">Product Name: </span>{card.name}</p>
                     <p><span className="font-semibold text-lg">Description: </span>{card.description}</p>

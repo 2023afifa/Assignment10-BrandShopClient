@@ -12,12 +12,8 @@ import Register from './Components/Register.jsx';
 import AuthProvider from './Provider/AuthProvider.jsx';
 import Details from './Components/Details.jsx';
 import MyCart from './Components/MyCart.jsx';
-// import Gucci from './Components/Gucci.jsx';
-// import Prada from './Components/Prada.jsx';
-// import LV from './Components/LV.jsx';
-// import Chanel from './Components/Chanel.jsx';
-// import Versace from './Components/Versace.jsx';
-// import Dior from './Components/Dior.jsx';
+import Update from './Components/Update.jsx';
+import PrivateRoute from './Routes/PrivetRoute.jsx';
 
 
 const router = createBrowserRouter([
@@ -37,47 +33,22 @@ const router = createBrowserRouter([
       },
       {
         path: "/:id",
-        element: <Details></Details>,
+        element: <PrivateRoute><Details></Details></PrivateRoute>,
         loader: () => fetch("http://localhost:5000/brands"),
       },
       {
+        path: "/update/:id",
+        element: <PrivateRoute><Update></Update></PrivateRoute>,
+        loader: ({ params }) => fetch(`http://localhost:5000/brands/${params.id}`),
+      },
+      {
         path: "/mycart",
-        element: <MyCart></MyCart>,
+        element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
         loader: () => fetch("http://localhost:5000/cart"),
       },
-      // {
-      //   path: "/brands/:brand",
-      //   element: <Gucci></Gucci>,
-      //   loader: () => fetch("http://localhost:5000/brands")
-      // },
-      // {
-      //   path: "/prada",
-      //   element: <Prada></Prada>,
-      //   loader: () => fetch("http://localhost:5000/brands")
-      // },
-      // {
-      //   path: "/lv",
-      //   element: <LV></LV>,
-      //   loader: () => fetch("http://localhost:5000/brands")
-      // },
-      // {
-      //   path: "/chanel",
-      //   element: <Chanel></Chanel>,
-      //   loader: () => fetch("http://localhost:5000/brands")
-      // },
-      // {
-      //   path: "/versace",
-      //   element: <Versace></Versace>,
-      //   loader: () => fetch("http://localhost:5000/brands")
-      // },
-      // {
-      //   path: "/dior",
-      //   element: <Dior></Dior>,
-      //   loader: () => fetch("http://localhost:5000/brands")
-      // },
       {
         path: "/addproduct",
-        element: <AddProduct></AddProduct>,
+        element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>,
       },
       {
         path: "/login",

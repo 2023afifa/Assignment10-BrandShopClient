@@ -11,7 +11,7 @@ const MyCart = () => {
         <div>
             <Navbar></Navbar>
             <h2 className="text-3xl text-center font-semibold my-10">My Cart</h2>
-            <div className="">
+            <div>
                 {
                     cards.map(card => <Cart key={card._id} card={card} item={item} setItem={setItem}></Cart>)
                 }

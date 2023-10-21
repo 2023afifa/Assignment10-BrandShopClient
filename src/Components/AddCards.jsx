@@ -42,7 +42,7 @@ const AddCards = () => {
                 <a href="#item3" className="btn btn-xs">3</a>
             </div>
 
-            <div className="ml-20 mt-14">
+            <div className="ml-10 lg:ml-20 mt-14">
                 {
                     card.map(acard => <AddCard key={acard._id} acard={acard}></AddCard>)
                 }
