@@ -1,0 +1,26 @@
+[
+    {
+        "id": "0001",
+        "name": "Elegant Evening Gown",
+        "price": 149.99,
+        "image": "https://i.ibb.co/7p9xKqz/new1.jpg"
+    },
+    {
+        "id": "0002",
+        "name": "Classic Leather Handbag",
+        "price": 89.99,
+        "image": "https://i.ibb.co/y8S5n3y/new2.jpg"
+    },
+    {
+        "id": "0003",
+        "name": "Stylish Oxford Shoes",
+        "price": 79.99,
+        "image": "https://i.ibb.co/Pw9FMLX/new3.jpg"
+    },
+    {
+        "id": "0004",
+        "name": "Modern Aviator Sunglasses",
+        "price": 39.99,
+        "image": "https://i.ibb.co/F4PxJnM/new4.jpg"
+    }
+]

@@ -20,7 +20,7 @@ const Navbar = () => {
         <li><NavLink className="mr-3" to="/">Home</NavLink></li>
         <li><NavLink className="mr-3" to="/addproduct">Add Product</NavLink></li>
         <li><NavLink className="mr-3" to="/mycart">My Cart</NavLink></li>
-        <li><NavLink className="mr-3" to="/login">Log In</NavLink></li>
+        <li><NavLink className="mr-3" to="/popular">Our Popular Products</NavLink></li>
     </>
 
     return (

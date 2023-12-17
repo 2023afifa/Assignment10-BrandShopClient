@@ -2,17 +2,25 @@ import { useLoaderData, useParams } from "react-router-dom";
 import Navbar from "./Navbar";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const Details = () => {
     const cards = useLoaderData();
     const { id } = useParams();
     const card = cards.find(card => card._id == id);
 
-    const handleAddCart = ( photo, name, price) => {
-        const newProduct = { photo, name, price };
+    const { user } = useContext(AuthContext);
+
+    const handleAddCart = (photo, name, price) => {
+        const username = user.displayName;
+        const useremail = user.email;
+        const userphoto = user.photoURL;
+
+        const newProduct = { photo, name, price, username, useremail, userphoto };
         console.log(newProduct);
 
-        fetch("https://brand-server-nine.vercel.app/cart", {
+        fetch("http://localhost:5000/cart", {
             method: "POST",
             headers: {
                 "content-type": "application/json"

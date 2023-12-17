@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
@@ -10,6 +10,8 @@ const Register = () => {
 
     const { createUser } = useContext(AuthContext);
     const [errorMessage, setErrorMessage] = useState("");
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const handleRegister = e => {
         e.preventDefault();
@@ -47,8 +49,8 @@ const Register = () => {
                         console.log("Profile updated");
                     })
                     .catch()
-                const user = { email };
-                fetch("https://brand-server-nine.vercel.app/user", {
+                const user = { email, name, photo };
+                fetch("http://localhost:5000/user", {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"
@@ -59,6 +61,7 @@ const Register = () => {
                     .then(data => {
                         if (data.insertedId) {
                             console.log("User added to database");
+                            navigate(location?.state ? location?.state : "/");
                         }
                     })
             })

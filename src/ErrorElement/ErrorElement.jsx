@@ -1,7 +1,7 @@
 const ErrorElement = () => {
     return (
         <div>
-            <h1 className="text-4xl font-bold text-center my-20">OPPS!!! Page Not Found</h1>
+            <img className="mx-auto mt-20" src="https://i.ibb.co/W2FkWzk/Error404.png" alt="" />
         </div>
     );
 };

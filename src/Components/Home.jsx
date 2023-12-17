@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import Message from "./Message";
 import Navbar from "./Navbar";
 import Sale from "./Sale";
+import NewArrivals from "./NewArrivals";
 
 
 const Home = () => {
@@ -28,11 +29,12 @@ const Home = () => {
             <div className="lg:w-[1350px] mx-auto">
                 <Navbar></Navbar>
                 <Banner></Banner>
-                <div className="text-center mt-16">
+                {/* <div className="text-center mt-16">
                     <button onClick={handleThemeSwich} className="btn bg-black text-[#8EACCD]">Dark Mode</button>
-                </div>
+                </div> */}
                 <BrandCards></BrandCards>
                 <Sale></Sale>
+                <NewArrivals></NewArrivals>
                 <Message></Message>
             </div>
             <Footer></Footer>

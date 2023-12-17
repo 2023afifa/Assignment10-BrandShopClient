@@ -14,6 +14,7 @@ import Details from './Components/Details.jsx';
 import MyCart from './Components/MyCart.jsx';
 import Update from './Components/Update.jsx';
 import PrivateRoute from './Routes/PrivetRoute.jsx';
+import Popular from './Components/Popular.jsx';
 
 
 const router = createBrowserRouter([
@@ -29,26 +30,31 @@ const router = createBrowserRouter([
       {
         path: "/brands/:brand",
         element: <AddCards></AddCards>,
-        loader: () => fetch("https://brand-server-nine.vercel.app/brands"),
+        loader: () => fetch("http://localhost:5000/brands"),
       },
       {
         path: "/:id",
         element: <PrivateRoute><Details></Details></PrivateRoute>,
-        loader: () => fetch("https://brand-server-nine.vercel.app/brands"),
+        loader: () => fetch("http://localhost:5000/brands"),
       },
       {
         path: "/update/:id",
         element: <PrivateRoute><Update></Update></PrivateRoute>,
-        loader: ({ params }) => fetch(`https://brand-server-nine.vercel.app/brands/${params.id}`),
+        loader: ({ params }) => fetch(`http://localhost:5000/brands/${params.id}`),
       },
       {
         path: "/mycart",
         element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-        loader: () => fetch("https://brand-server-nine.vercel.app/cart"),
+        loader: () => fetch("http://localhost:5000/cart"),
       },
       {
         path: "/addproduct",
         element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>,
+      },
+      {
+        path: "/popular",
+        element: <Popular></Popular>,
+        loader: () => fetch("http://localhost:5000/cart"),
       },
       {
         path: "/login",

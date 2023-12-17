@@ -1,7 +1,6 @@
 const Sale = () => {
     return (
         <div className="mt-20">
-            <h2 className="text-3xl text-[#1F4172] text-center font-semibold mb-6">Sale!!!</h2>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <img src="https://i.ibb.co/nngM9b3/sale.jpg" className="max-w-sm rounded-lg shadow-2xl" />
