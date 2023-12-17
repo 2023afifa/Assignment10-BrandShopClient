@@ -1,8 +1,8 @@
-# React + Vite
+5 bullet points for my project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a Fashion and Apparel related website named ClassyCloset. You will find here 6 famous brands.
+Clicking on each brand you will see some available products like dresses, bags, shoes etc.
+You will also see the price, rating of each product on the brand page.
+If you want to see some more info like product description you have to login/Register.
+Once you login you can add to cart and can see your cart in the my cart section.
+Client side link: https://brandshop-bdf06.web.app/
