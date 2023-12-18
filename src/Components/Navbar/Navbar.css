@@ -1,0 +1,5 @@
+.navLink > li > a:hover, .navLink > li > a.active {
+    background-color: transparent !important;
+    color: rgb(82 82 91) !important;
+    text-decoration: underline !important;
+}

@@ -6,7 +6,7 @@ function App() {
   return (
     <>
 
-      <div className='font-playFair'>
+      <div className='font-cinzel'>
         <Outlet></Outlet>
       </div>
 

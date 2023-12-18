@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import Cart from "./Cart";
-import Navbar from "./Navbar";
+import Navbar from "./Navbar/Navbar";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 

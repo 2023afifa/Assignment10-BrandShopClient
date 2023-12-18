@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import Navbar from "./Navbar";
+import Navbar from "./Navbar/Navbar";
 import Swal from "sweetalert2";
 
 const Update = () => {

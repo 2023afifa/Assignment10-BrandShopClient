@@ -1,6 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import AddCard from "./AddCard";
-import Navbar from "./Navbar";
+import Navbar from "./Navbar/Navbar";
 import Swal from "sweetalert2";
 
 
