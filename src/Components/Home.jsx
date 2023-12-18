@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Banner from "./Banner/Banner";
-import BrandCards from "./BrandCards";
+import BrandCards from "./Collections/BrandCards";
 import Footer from "./Footer";
 import Message from "./Message";
 import Navbar from "./Navbar/Navbar";

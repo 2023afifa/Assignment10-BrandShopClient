@@ -2,31 +2,41 @@
     {
         "id": 1,
         "brand": "Gucci",
-        "brandImage": "https://i.ibb.co/w72P5Xg/brand1.jpg"
+        "brandImage": "https://i.ibb.co/StTQTBT/Gucci-Cover2.jpg"
     },
     {
         "id": 2,
         "brand": "Prada",
-        "brandImage": "https://i.ibb.co/hBzmQdT/brand2.jpg"
+        "brandImage": "https://i.ibb.co/QKL9RNJ/Prada-Cover.jpg"
     },
     {
         "id": 3,
         "brand": "Louis Vuitton",
-        "brandImage": "https://i.ibb.co/rQ6btKD/brand3.jpg"
+        "brandImage": "https://i.ibb.co/svP5w8G/LVCover.jpg"
     },
     {
         "id": 4,
         "brand": "Chanel",
-        "brandImage": "https://i.ibb.co/9vqnvSb/brand4.jpg"
+        "brandImage": "https://i.ibb.co/GCBF2GM/Chanel-Cover2.jpg"
     },
     {
         "id": 5,
         "brand": "Versace",
-        "brandImage": "https://i.ibb.co/VYS63HT/brand5.jpg"
+        "brandImage": "https://i.ibb.co/2NBPzgQ/Versace-Cover2.jpg"
     },
     {
         "id": 6,
         "brand": "Dior",
-        "brandImage": "https://i.ibb.co/6vSd44y/brand6.jpg"
+        "brandImage": "https://i.ibb.co/zQFdS9h/Dior-Cover.jpg"
+    },
+    {
+        "id": 7,
+        "brand": "Saint Laurent",
+        "brandImage": "https://i.ibb.co/yhr99hv/YSLCover.jpg"
+    },
+    {
+        "id": 8,
+        "brand": "Givenchy",
+        "brandImage": "https://i.ibb.co/SshtCxc/Givenchy-Cover.jpg"
     }
 ]
