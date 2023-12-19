@@ -1,10 +1,9 @@
 const Sale = () => {
     return (
-        <div className="mt-20">
-            <div className="hero min-h-screen bg-base-200">
+        <div className="mt-10 bg-fixed" style={{backgroundImage: 'url(https://i.ibb.co/6wnQLwC/SaleBag.jpg)'}}>
+            <div className="hero py-28">
                 <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src="https://i.ibb.co/nngM9b3/sale.jpg" className="max-w-sm rounded-lg shadow-2xl" />
-                    <div>
+                    <div className="text-white text-center">
                         <p className="text-3xl font-semibold">Limited Time - Online only</p>
                         <h1 className="text-6xl font-bold">50% Off</h1>
                         <p className="text-2xl font-semibold mt-3">On all Crossbody bags</p>

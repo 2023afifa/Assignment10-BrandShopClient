@@ -12,8 +12,8 @@ const NewArrivals = () => {
 
     return (
         <div>
-            <div className="mt-16">
-                <h3 className="text-5xl text-[#1F4172] text-center font-semibold mb-6">
+            <div className="mt-24 mb-16">
+                <h3 className="text-5xl text-black text-center font-semibold mb-6">
                     <span className="font-extrabold">Fresh </span>
                     <span className="italic">Finds </span>
                     <span className="font-extrabold">Unveiling </span><br />

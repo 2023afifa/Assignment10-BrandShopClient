@@ -1,10 +1,9 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import "./Navbar.css";
 
 const Navbar = () => {
-
     const { user, logOut } = useContext(AuthContext);
 
     const handleLogout = () => {
@@ -17,6 +16,21 @@ const Navbar = () => {
             })
     }
 
+    const [theme, setTheme] = useState("light");
+
+    useEffect(() => {
+        if (theme === "dark") {
+            document.documentElement.classList.add("dark");
+        }
+        else {
+            document.documentElement.classList.remove("dark");
+        }
+    }, [theme])
+
+    const handleThemeSwitch = () => {
+        setTheme(theme === "dark" ? "light" : "dark");
+    }
+
     const navLink = <>
         <li><NavLink className="mr-3" to="/">Home</NavLink></li>
         <li><NavLink className="mr-3" to="/addproduct">Add Product</NavLink></li>
@@ -26,7 +40,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="navbar absolute z-10 bg-transparent px-10">
+            <div className="navbar absolute z-10 bg-transparent px-10 border-2 top-0">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -44,6 +58,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
+                    <input onClick={handleThemeSwitch} type="checkbox" className="toggle" />
                     {
                         user ?
                             <>
