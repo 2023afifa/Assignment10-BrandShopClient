@@ -6,7 +6,7 @@ function App() {
   return (
     <>
 
-      <div className='font-cinzel'>
+      <div className='font-cinzel dark:bg-black'>
         <Outlet></Outlet>
       </div>
 

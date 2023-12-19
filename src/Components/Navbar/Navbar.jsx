@@ -16,19 +16,18 @@ const Navbar = () => {
             })
     }
 
-    const [theme, setTheme] = useState("light");
+
+    const storedTheme = localStorage.getItem("theme");
+    const [theme, setTheme] = useState(storedTheme || "light");
 
     useEffect(() => {
-        if (theme === "dark") {
-            document.documentElement.classList.add("dark");
-        }
-        else {
-            document.documentElement.classList.remove("dark");
-        }
+        document.documentElement.setAttribute("data-theme", theme);
     }, [theme])
 
     const handleThemeSwitch = () => {
-        setTheme(theme === "dark" ? "light" : "dark");
+        const newTheme = theme === "light" ? "dark" : "light";
+        setTheme(newTheme);
+        localStorage.setItem("theme", newTheme);
     }
 
     const navLink = <>
@@ -40,7 +39,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="navbar absolute z-10 bg-transparent px-10 border-2 top-0">
+            <div className="navbar absolute z-10 bg-transparent px-10 top-0">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -58,7 +57,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <input onClick={handleThemeSwitch} type="checkbox" className="toggle" />
+                    <input onClick={handleThemeSwitch} type="checkbox" className="toggle mr-3" />
                     {
                         user ?
                             <>
@@ -67,8 +66,7 @@ const Navbar = () => {
                                         <img src={user.photoURL} />
                                     </div>
                                 </label>
-                                <span className="ml-1 mr-3 font-medium hidden md:block">{user.email}</span>
-                                <button onClick={handleLogout} className="btn">Log Out</button>
+                                <button onClick={handleLogout} className="btn bg-transparent border-none text-lg hover:bg-transparent hover:text-slate-300">Log Out</button>
                             </>
                             : <Link to="/login"><button className="btn bg-transparent border-none text-lg hover:bg-transparent hover:text-slate-300">Log In</button></Link>
                     }
