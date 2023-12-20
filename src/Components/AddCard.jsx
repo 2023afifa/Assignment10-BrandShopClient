@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
-const AddCard = ({ acard }) => {
-    const { _id, name, brand, type, price, rating, photo } = acard;
+const AddCard = ({ c }) => {
+    const { _id, name, brand, type, price, rating, photo } = c;
 
     return (
         <div>

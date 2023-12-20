@@ -1,52 +1,97 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import AddCard from "./AddCard";
 import Navbar from "./Navbar/Navbar";
-import Swal from "sweetalert2";
+import { useEffect, useState } from "react";
+import Footer from "./Footer/Footer";
 
 
 const AddCards = () => {
+    const [brandCards, setBrandCards] = useState([]);
     const cards = useLoaderData();
     const { brand } = useParams();
     console.log(brand);
     const card = cards.filter(card => card.brand === brand);
     console.log(card);
 
-    if (card.length === 0) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Do not have any products here.....Sorry',
-        })
-    }
+
+    useEffect(() => {
+        fetch("/public/brandname.json")
+            .then(res => res.json())
+            .then(data => setBrandCards(data))
+    }, [])
+
+    const brandCard = brandCards.filter(brandCard => brandCard.brand === brand);
+
+
+    // if (card.length === 0) {
+    //     return (
+    //         <span>
+    //             <Navbar></Navbar>
+    //             <h2 className="text-4xl text-center font-semibold mt-16 mb-8">{brand}</h2>
+    //             <h3 className="text-center text-2xl">Sorry, No product is available here right now</h3>
+    //             <img className="w-1/2 my-5 mx-auto" src="https://i.ibb.co/wJN6NJV/sorry.jpg" alt="" />
+    //             <Footer></Footer>
+    //         </span>
+    //     )
+    // }
 
 
     return (
         <div>
             <Navbar></Navbar>
-            <h2 className="text-4xl text-center font-semibold my-10">{brand}</h2>
+            <h2 className="text-4xl text-center font-semibold mt-16 mb-3">{brand}</h2>
 
-            <div className="carousel w-full">
-                <div id="item1" className="carousel-item w-full">
-                    <img src="https://i.ibb.co/QdtPnH0/slider1.jpg" className="w-1/2 mx-auto" />
-                </div>
-                <div id="item2" className="carousel-item w-full">
-                    <img src="https://i.ibb.co/nrdj4vn/slider2.jpg" className="w-1/2 mx-auto" />
-                </div>
-                <div id="item3" className="carousel-item w-full">
-                    <img src="https://i.ibb.co/dKptyP9/slider3.jpg" className="w-1/2 mx-auto" />
-                </div>
-            </div>
-            <div className="flex justify-center w-full py-2 gap-2">
-                <a href="#item1" className="btn btn-xs">1</a>
-                <a href="#item2" className="btn btn-xs">2</a>
-                <a href="#item3" className="btn btn-xs">3</a>
-            </div>
+            <div>
 
-            <div className="ml-10 lg:ml-20 mt-14">
+                <div className="bg-black py-5">
+                    {
+                        brandCard.map(bCard => <div key={bCard.id}>
+                            <div className="carousel">
+                                <div className="carousel-item">
+                                    <img className="w-[350px] h-[500px]" src={bCard.brandImage1} alt="Burger" />
+                                </div>
+                                <div className="carousel-item">
+                                    <img className="w-[350px] h-[500px]" src={bCard.brandImage2} alt="Burger" />
+                                </div>
+                                <div className="carousel-item">
+                                    <img className="w-[350px] h-[500px]" src={bCard.brandImage3} alt="Burger" />
+                                </div>
+                                <div className="carousel-item">
+                                    <img className="w-[350px] h-[500px]" src={bCard.brandImage4} alt="Burger" />
+                                </div>
+                                <div className="carousel-item">
+                                    <img className="w-[350px] h-[500px]" src={bCard.brandImage5} alt="Burger" />
+                                </div>
+                                <div className="carousel-item">
+                                    <img className="w-[350px] h-[500px]" src={bCard.brandImage6} alt="Burger" />
+                                </div>
+                                <div className="carousel-item">
+                                    <img className="w-[350px] h-[500px]" src={bCard.brandImage7} alt="Burger" />
+                                </div>
+                            </div>
+                        </div>)
+                    }
+                </div>
+
+
                 {
-                    card.map(acard => <AddCard key={acard._id} acard={acard}></AddCard>)
+                    card.length === 0 ?
+                        <>
+                            <Navbar></Navbar>
+                            <h3 className="text-center text-2xl mt-5 mb-10">Sorry, No product is available here right now</h3>
+                            {/* <img className="w-1/2 my-5 mx-auto" src="https://i.ibb.co/wJN6NJV/sorry.jpg" alt="" /> */}
+                            <Footer></Footer>
+                        </>
+                        :
+                        <div className="ml-10 lg:ml-20 mt-14">
+                            {
+                                card.map(c => <AddCard key={c._id} c={c}></AddCard>)
+                            }
+                        </div>
                 }
+
             </div>
+
         </div>
     );
 };

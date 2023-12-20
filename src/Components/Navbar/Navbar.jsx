@@ -49,10 +49,10 @@ const Navbar = () => {
                             {navLink}
                         </ul>
                     </div>
-                    <a className="text-2xl md:text-4xl font-extrabold ml-2 text-black">ClassyCloset</a>
+                    <a className="text-2xl md:text-4xl font-extrabold ml-2">ClassyCloset</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 font-semibold text-black navLink">
+                    <ul className="menu menu-horizontal px-1 font-bold navLink">
                         {navLink}
                     </ul>
                 </div>

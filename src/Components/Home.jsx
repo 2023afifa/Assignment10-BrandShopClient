@@ -8,8 +8,8 @@ import NewArrivals from "./NewArrivals";
 
 const Home = () => {
     return (
-        <div className="dark:bg-black">
-            <div className="">
+        <div>
+            <div>
                 <Navbar></Navbar>
                 <Banner></Banner>
                 <BrandCards></BrandCards>

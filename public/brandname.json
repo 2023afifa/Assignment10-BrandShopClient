@@ -2,41 +2,103 @@
     {
         "id": 1,
         "brand": "Gucci",
-        "brandImage": "https://i.ibb.co/StTQTBT/Gucci-Cover2.jpg"
+        "brandCover": "https://i.ibb.co/StTQTBT/Gucci-Cover2.jpg",
+        "brandImage1": "https://i.ibb.co/wZkXbcN/gucci6.jpg",
+        "brandImage2": "https://i.ibb.co/Bq5fQPM/gucci7.jpg",
+        "brandImage3": "https://i.ibb.co/pwKvSfg/gucci4.jpg",
+        "brandImage4": "https://i.ibb.co/C8KyxXk/gucci5.jpg",
+        "brandImage5": "https://i.ibb.co/LpvC2S4/gucci2.jpg",
+        "brandImage6": "https://i.ibb.co/8smMfpw/gucci1.jpg",
+        "brandImage7": "https://i.ibb.co/gyLKJY7/gucci3.jpg"
     },
     {
         "id": 2,
         "brand": "Prada",
-        "brandImage": "https://i.ibb.co/QKL9RNJ/Prada-Cover.jpg"
+        "brandCover": "https://i.ibb.co/QKL9RNJ/Prada-Cover.jpg",
+        "brandImage1": "https://i.ibb.co/Tc41TD6/prada1.jpg",
+        "brandImage2": "https://i.ibb.co/CtkbCBD/prada7.jpg",
+        "brandImage3": "https://i.ibb.co/552DWSW/prada6.jpg",
+        "brandImage4": "https://i.ibb.co/yXSdWGt/prada3.jpg",
+        "brandImage5": "https://i.ibb.co/7byCYJn/prada2.jpg",
+        "brandImage6": "https://i.ibb.co/G7f2v87/prada4.jpg",
+        "brandImage7": "https://i.ibb.co/KzKhkLQ/prada5.jpg"
     },
     {
         "id": 3,
         "brand": "Louis Vuitton",
-        "brandImage": "https://i.ibb.co/svP5w8G/LVCover.jpg"
+        "brandCover": "https://i.ibb.co/svP5w8G/LVCover.jpg",
+        "brandImage1": "https://i.ibb.co/26L9WWn/lv1.jpg",
+        "brandImage2": "https://i.ibb.co/znc7MCS/lv2.jpg",
+        "brandImage3": "https://i.ibb.co/Lvmkwqw/lv7.jpg",
+        "brandImage4": "https://i.ibb.co/3MFHKrK/lv4.jpg",
+        "brandImage5": "https://i.ibb.co/S5gG076/lv5.jpg",
+        "brandImage6": "https://i.ibb.co/Bj28QBM/lv6.jpg",
+        "brandImage7": "https://i.ibb.co/b3dGqTk/lv3.jpg"
     },
     {
         "id": 4,
         "brand": "Chanel",
-        "brandImage": "https://i.ibb.co/GCBF2GM/Chanel-Cover2.jpg"
+        "brandCover": "https://i.ibb.co/GCBF2GM/Chanel-Cover2.jpg",
+        "brandImage1": "https://i.ibb.co/xmhjccN/chanel1.jpg",
+        "brandImage2": "https://i.ibb.co/j6rQ9X6/chanel2.jpg",
+        "brandImage3": "https://i.ibb.co/k5bmbHr/chanel3.jpg",
+        "brandImage4": "https://i.ibb.co/yXRGmkr/chanel4.jpg",
+        "brandImage5": "https://i.ibb.co/4dtFBNR/chanel5.jpg",
+        "brandImage6": "https://i.ibb.co/Q6C9566/chanel6.jpg",
+        "brandImage7": "https://i.ibb.co/XJTm6hV/chanel7.jpg"
     },
     {
         "id": 5,
         "brand": "Versace",
-        "brandImage": "https://i.ibb.co/2NBPzgQ/Versace-Cover2.jpg"
+        "brandCover": "https://i.ibb.co/2NBPzgQ/Versace-Cover2.jpg",
+        "brandImage1": "https://i.ibb.co/pzBYjNc/versace1.jpg",
+        "brandImage2": "https://i.ibb.co/Gx00qck/versace2.jpg",
+        "brandImage3": "https://i.ibb.co/p1YxJSn/versace6.jpg",
+        "brandImage4": "https://i.ibb.co/1f0gLZS/versace4.jpg",
+        "brandImage5": "https://i.ibb.co/Fq1pHTd/versace3.jpg",
+        "brandImage6": "https://i.ibb.co/W2PNwGL/versace5.jpg",
+        "brandImage7": "https://i.ibb.co/R0hb7Bp/Versace-Cover.jpg"
     },
     {
         "id": 6,
         "brand": "Dior",
-        "brandImage": "https://i.ibb.co/zQFdS9h/Dior-Cover.jpg"
+        "brandCover": "https://i.ibb.co/zQFdS9h/Dior-Cover.jpg",
+        "brandImage1": "https://i.ibb.co/StTQTBT/Gucci-Cover2.jpg",
+        "brandImage2": "https://i.ibb.co/StTQTBT/Gucci-Cover2.jpg",
+        "brandImage3": "https://i.ibb.co/StTQTBT/Gucci-Cover2.jpg",
+        "brandImage4": "https://i.ibb.co/StTQTBT/Gucci-Cover2.jpg",
+        "brandImage5": "https://i.ibb.co/StTQTBT/Gucci-Cover2.jpg",
+        "brandImage6": "https://i.ibb.co/StTQTBT/Gucci-Cover2.jpg",
+        "brandImage7": "https://i.ibb.co/xDvmRFY/dior1.jpg
+        https://i.ibb.co/R6f7Wxn/dior2.jpg
+        https://i.ibb.co/yqzwwhD/dior3.jpg
+        https://i.ibb.co/Gszgycw/dior4.jpg
+        https://i.ibb.co/fGkJWq1/dior5.jpg
+        https://i.ibb.co/5jHYzkn/dior6.jpg
+        https://i.ibb.co/g4xGY8M/dior7.jpg"
     },
     {
         "id": 7,
         "brand": "Saint Laurent",
-        "brandImage": "https://i.ibb.co/yhr99hv/YSLCover.jpg"
+        "brandCover": "https://i.ibb.co/yhr99hv/YSLCover.jpg",
+        "brandImage1": "https://i.ibb.co/StTQTBT/Gucci-Cover2.jpg",
+        "brandImage2": "https://i.ibb.co/StTQTBT/Gucci-Cover2.jpg",
+        "brandImage3": "https://i.ibb.co/StTQTBT/Gucci-Cover2.jpg",
+        "brandImage4": "https://i.ibb.co/StTQTBT/Gucci-Cover2.jpg",
+        "brandImage5": "https://i.ibb.co/StTQTBT/Gucci-Cover2.jpg",
+        "brandImage6": "https://i.ibb.co/StTQTBT/Gucci-Cover2.jpg",
+        "brandImage7": "https://i.ibb.co/StTQTBT/Gucci-Cover2.jpg"
     },
     {
         "id": 8,
         "brand": "Givenchy",
-        "brandImage": "https://i.ibb.co/SshtCxc/Givenchy-Cover.jpg"
+        "brandCover": "https://i.ibb.co/SshtCxc/Givenchy-Cover.jpg",
+        "brandImage1": "https://i.ibb.co/StTQTBT/Gucci-Cover2.jpg",
+        "brandImage2": "https://i.ibb.co/StTQTBT/Gucci-Cover2.jpg",
+        "brandImage3": "https://i.ibb.co/StTQTBT/Gucci-Cover2.jpg",
+        "brandImage4": "https://i.ibb.co/StTQTBT/Gucci-Cover2.jpg",
+        "brandImage5": "https://i.ibb.co/StTQTBT/Gucci-Cover2.jpg",
+        "brandImage6": "https://i.ibb.co/StTQTBT/Gucci-Cover2.jpg",
+        "brandImage7": "https://i.ibb.co/StTQTBT/Gucci-Cover2.jpg"
     }
 ]
