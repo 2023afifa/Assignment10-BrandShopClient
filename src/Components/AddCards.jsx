@@ -79,11 +79,10 @@ const AddCards = () => {
                         <>
                             <Navbar></Navbar>
                             <h3 className="text-center text-2xl mt-5 mb-10">Sorry, No product is available here right now</h3>
-                            {/* <img className="w-1/2 my-5 mx-auto" src="https://i.ibb.co/wJN6NJV/sorry.jpg" alt="" /> */}
                             <Footer></Footer>
                         </>
                         :
-                        <div className="ml-10 lg:ml-20 mt-14">
+                        <div className="grid lg:grid-cols-4 gap-2 mt-14">
                             {
                                 card.map(c => <AddCard key={c._id} c={c}></AddCard>)
                             }
