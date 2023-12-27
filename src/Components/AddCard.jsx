@@ -5,20 +5,22 @@ const AddCard = ({ c }) => {
 
     return (
         <div className="mx-auto">
-            <div>
+            <div className="flex flex-col h-[420px] shadow p-3">
                 <div>
-                    <img className="w-[350px]" src={photo} alt="" />
+                    <img className="h-60 w-[350px]" src={photo} alt="" />
                 </div>
-                <div>
-                    <h3>{name}</h3>
+                <div className="m-3">
+                    <h3 className="text-lg font-medium">{name}</h3>
+                    <p className="font-medium">Price: <span className="font-semibold">$ {price}</span></p>
+                </div>
+                <div className="ml-3 mt-auto">
+                    <Link to={`/${_id}`}><button className="btn w-full rounded-none bg-slate-950 text-white hover:text-black">See Details</button></Link>
                 </div>
             </div>
-            {/* <div className="card-actions">
-                <Link to={`/${_id}`}><button className="btn bg-[#8EACCD] text-white">Details</button></Link>
-                <Link to={`/update/${_id}`}><button className="btn bg-[#8EACCD] text-white">Update</button></Link>
-            </div> */}
         </div>
     );
 };
+
+{/* <Link to={`/update/${_id}`}><button className="btn">Update</button></Link> */ }
 
 export default AddCard;

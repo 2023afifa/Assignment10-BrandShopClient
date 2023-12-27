@@ -82,11 +82,14 @@ const AddCards = () => {
                             <Footer></Footer>
                         </>
                         :
-                        <div className="grid lg:grid-cols-4 gap-2 mt-14">
-                            {
-                                card.map(c => <AddCard key={c._id} c={c}></AddCard>)
-                            }
-                        </div>
+                        <>
+                            <h3 className="text-3xl text-center font-semibold mt-20">See The Available Products Here</h3>
+                            <div className="grid lg:grid-cols-4 gap-5 m-10">
+                                {
+                                    card.map(c => <AddCard key={c._id} c={c}></AddCard>)
+                                }
+                            </div>
+                        </>
                 }
 
             </div>

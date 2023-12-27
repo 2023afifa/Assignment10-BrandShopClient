@@ -39,11 +39,11 @@
         "id": 4,
         "brand": "Chanel",
         "brandCover": "https://i.ibb.co/GCBF2GM/Chanel-Cover2.jpg",
-        "brandImage1": "https://i.ibb.co/xmhjccN/chanel1.jpg",
+        "brandImage1": "https://i.ibb.co/4dtFBNR/chanel5.jpg",
         "brandImage2": "https://i.ibb.co/j6rQ9X6/chanel2.jpg",
         "brandImage3": "https://i.ibb.co/k5bmbHr/chanel3.jpg",
         "brandImage4": "https://i.ibb.co/yXRGmkr/chanel4.jpg",
-        "brandImage5": "https://i.ibb.co/4dtFBNR/chanel5.jpg",
+        "brandImage5": "https://i.ibb.co/xmhjccN/chanel1.jpg",
         "brandImage6": "https://i.ibb.co/Q6C9566/chanel6.jpg",
         "brandImage7": "https://i.ibb.co/XJTm6hV/chanel7.jpg"
     },
@@ -73,7 +73,7 @@
     },
     {
         "id": 7,
-        "brand": "Saint Laurent",
+        "brand": "Yves Saint Laurent",
         "brandCover": "https://i.ibb.co/yhr99hv/YSLCover.jpg",
         "brandImage1": "https://i.ibb.co/rfvDHkb/ysl1.jpg",
         "brandImage2": "https://i.ibb.co/jk83F26/ysl2.jpg",
