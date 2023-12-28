@@ -4,6 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import Footer from "./Footer/Footer";
 
 const Details = () => {
     const cards = useLoaderData();
@@ -39,8 +40,8 @@ const Details = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <h2 className="text-3xl text-center font-semibold my-10">Product Details</h2>
-            <div className="flex flex-col lg:flex-row gap-6 mx-5 lg:mx-10">
+            <h2 className="text-3xl text-center font-semibold mt-20 mb-10">Product Details</h2>
+            <div className="flex flex-col lg:flex-row gap-6 mx-5 lg:mx-10 mb-10">
                 <img src={card.photo} alt="" className="lg:w-2/5 rounded-lg" />
                 <div className="mt-10">
                     <p><span className="font-semibold text-lg">Product Name: </span>{card.name}</p>
@@ -51,6 +52,7 @@ const Details = () => {
                     <button onClick={() => handleAddCart(card.photo, card.name, card.price)} className="btn bg-[#8EACCD] text-white mt-5">Add To Cart</button>
                 </div>
             </div>
+            <Footer></Footer>
             <ToastContainer />
         </div>
     );

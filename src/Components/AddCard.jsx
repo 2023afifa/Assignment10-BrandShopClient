@@ -6,8 +6,8 @@ const AddCard = ({ c }) => {
     return (
         <div className="mx-auto">
             <div className="flex flex-col h-[420px] shadow p-3">
-                <div>
-                    <img className="h-60 w-[350px]" src={photo} alt="" />
+                <div className="relative overflow-hidden">
+                    <img className="h-60 w-[350px] transition duration-200 ease-in-out hover:scale-110" src={photo} alt="" />
                 </div>
                 <div className="m-3">
                     <h3 className="text-lg font-medium">{name}</h3>
