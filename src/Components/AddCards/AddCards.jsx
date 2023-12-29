@@ -1,8 +1,8 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import AddCard from "./AddCard";
-import Navbar from "./Navbar/Navbar";
+import Navbar from "../Navbar/Navbar";
 import { useEffect, useState } from "react";
-import Footer from "./Footer/Footer";
+import Footer from "../Footer/Footer";
 
 
 const AddCards = () => {

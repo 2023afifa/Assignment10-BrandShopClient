@@ -1,0 +1,15 @@
+.activebutton {
+    background-color: rgb(229 231 235);
+    font-weight: 500;
+    flex: 1 1 0%;
+    padding: 10px;
+}
+
+.inactivebutton {
+    flex: 1 1 0%;
+    padding: 10px;
+}
+
+.inactivebutton:hover {
+    color: rgb(156 163 175);
+}

@@ -6,15 +6,17 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorElement from './ErrorElement/ErrorElement.jsx';
 import Home from './Components/Home.jsx';
 import AddProduct from './Components/AddProduct.jsx';
-import AddCards from './Components/AddCards.jsx';
+import AddCards from './Components/AddCards/AddCards.jsx';
 import Login from './Components/Login.jsx';
 import Register from './Components/Register.jsx';
 import AuthProvider from './Provider/AuthProvider.jsx';
-import Details from './Components/Details.jsx';
+import Details from './Components/Details/Details.jsx';
 import MyCart from './Components/MyCart.jsx';
 import Update from './Components/Update.jsx';
 import PrivateRoute from './Routes/PrivetRoute.jsx';
 import Popular from './Components/Popular.jsx';
+import 'alpinejs';
+
 
 
 const router = createBrowserRouter([
@@ -33,9 +35,9 @@ const router = createBrowserRouter([
         loader: () => fetch("http://localhost:5000/brands"),
       },
       {
-        path: "/:id",
+        path: "/details/:id",
         element: <PrivateRoute><Details></Details></PrivateRoute>,
-        loader: () => fetch("http://localhost:5000/brands"),
+        loader: ({ params }) => fetch(`http://localhost:5000/brands/${params.id}`),
       },
       {
         path: "/update/:id",

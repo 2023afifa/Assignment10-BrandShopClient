@@ -14,7 +14,7 @@ const AddCard = ({ c }) => {
                     <p className="font-medium">Price: <span className="font-semibold">$ {price}</span></p>
                 </div>
                 <div className="ml-3 mt-auto">
-                    <Link to={`/${_id}`}><button className="btn w-full rounded-none bg-slate-950 text-white hover:text-black">See Details</button></Link>
+                    <Link to={`/details/${_id}`}><button className="btn w-full rounded-none bg-slate-950 text-white hover:text-black">See Details</button></Link>
                 </div>
             </div>
         </div>
