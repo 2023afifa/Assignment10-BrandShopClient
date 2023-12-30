@@ -4,16 +4,16 @@ import App from './App.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorElement from './ErrorElement/ErrorElement.jsx';
-import Home from './Components/Home.jsx';
+import Home from './Components/Home/Home.jsx';
 import AddProduct from './Components/AddProduct/AddProduct.jsx';
 import AddCards from './Components/AddCards/AddCards.jsx';
-import Login from './Components/Login.jsx';
-import Register from './Components/Register.jsx';
+import Login from './Components/Login/Login.jsx';
+import Register from './Components/Register/Register.jsx';
 import AuthProvider from './Provider/AuthProvider.jsx';
 import Details from './Components/Details/Details.jsx';
 import MyCart from './Components/MyCart/MyCart.jsx';
 import Update from './Components/Update.jsx';
-import PrivateRoute from './Routes/PrivetRoute.jsx';
+import PrivateRoute from './Routes/PrivateRoute.jsx';
 import Popular from './Components/Popular.jsx';
 import 'alpinejs';
 
