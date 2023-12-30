@@ -11,7 +11,7 @@ import Login from './Components/Login.jsx';
 import Register from './Components/Register.jsx';
 import AuthProvider from './Provider/AuthProvider.jsx';
 import Details from './Components/Details/Details.jsx';
-import MyCart from './Components/MyCart.jsx';
+import MyCart from './Components/MyCart/MyCart.jsx';
 import Update from './Components/Update.jsx';
 import PrivateRoute from './Routes/PrivetRoute.jsx';
 import Popular from './Components/Popular.jsx';

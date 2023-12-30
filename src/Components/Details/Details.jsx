@@ -24,7 +24,7 @@ const Details = () => {
         const useremail = user.email;
         const userphoto = user.photoURL;
 
-        const newProduct = { photo, name, price, username, useremail, userphoto };
+        const newProduct = { name, brand, type, price, description, rating, photo, username, useremail, userphoto };
         console.log(newProduct);
 
         fetch("http://localhost:5000/cart", {
