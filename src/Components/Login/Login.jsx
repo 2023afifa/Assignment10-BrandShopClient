@@ -41,30 +41,35 @@ const Login = () => {
     }
 
     return (
-        <div>
-            <h2 className="text-3xl font-bold text-center mt-10">Please Login</h2>
-            <form onSubmit={handleLogin} className="card-body lg:w-1/2 mx-auto">
-                <div className="form-control">
-                    <label className="label">
-                        <span className="label-text">Email</span>
-                    </label>
-                    <input type="email" placeholder="Enter email" name="email" className="input input-bordered" required />
-                </div>
-                <div className="form-control">
-                    <label className="label">
-                        <span className="label-text">Password</span>
-                    </label>
-                    <input type="password" placeholder="Enter password" name="password" className="input input-bordered" required />
-                </div>
-                {
-                    errorMessage && <p className="text-center text-red-500">{errorMessage}</p>
-                }
-                <div className="form-control mt-6">
-                    <button className="btn bg-[#8EACCD]">Login</button>
-                </div>
-            </form>
-            <p className="text-center">Do not have an account? Please <Link className="text-[#8EACCD] font-bold" to="/register">Register</Link></p>
-            <p className="text-center mt-3">You can login with <a onClick={handleGoogleLogIn} className="text-sky-500 font-bold">Google</a></p>
+        <div className="flex">
+            <div className="flex-1 bg-rose-100">
+                <img className="max-h-screen mx-auto" src="https://i.ibb.co/bRnmZXX/login.jpg" alt="" />
+            </div>
+            <div className="flex-1">
+                <h2 className="text-3xl font-bold text-center mt-24">Please Login</h2>
+                <form onSubmit={handleLogin} className="card-body lg:w-2/3 mx-auto">
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Email</span>
+                        </label>
+                        <input type="email" placeholder="Enter email" name="email" className="input input-bordered rounded-none" required />
+                    </div>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Password</span>
+                        </label>
+                        <input type="password" placeholder="Enter password" name="password" className="input input-bordered rounded-none" required />
+                    </div>
+                    {
+                        errorMessage && <p className="text-center text-red-500">{errorMessage}</p>
+                    }
+                    <div className="form-control mt-6">
+                        <button className="btn bg-black text-white rounded-none">Login</button>
+                    </div>
+                </form>
+                <p className="text-center">Do not have an account? Please <Link className="text-black font-bold" to="/register">Register</Link></p>
+                <p className="text-center mt-3">You can login with <a onClick={handleGoogleLogIn} className="text-rose-300 font-bold">Google</a></p>
+            </div>
         </div>
     );
 };

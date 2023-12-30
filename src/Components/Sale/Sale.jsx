@@ -1,6 +1,6 @@
 const Sale = () => {
     return (
-        <div className="mt-10 bg-fixed" style={{backgroundImage: 'url(https://i.ibb.co/6wnQLwC/SaleBag.jpg)'}}>
+        <div className="my-20 bg-fixed" style={{backgroundImage: 'url(https://i.ibb.co/6wnQLwC/SaleBag.jpg)'}}>
             <div className="hero py-28">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-white text-center">
