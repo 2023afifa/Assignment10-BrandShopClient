@@ -6,12 +6,12 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Footer from "../Footer/Footer";
 import "./Details.css";
+import Swal from "sweetalert2";
 
 const Details = () => {
     const { user } = useContext(AuthContext);
-    const product = useLoaderData();
+    const [product, setProduct] = useState(useLoaderData());
     const { _id, name, brand, type, price, description, rating, photo } = product;
-
     const [activeButton, setActiveButton] = useState('description');
 
     const handleActiveButton = (button) => {
@@ -43,6 +43,42 @@ const Details = () => {
             })
     }
 
+    const handleUpdateProduct = event => {
+        const form = event.target;
+        const name = form.name.value;
+        const brand = form.brand.value;
+        const type = form.type.value;
+        const price = form.price.value;
+        const description = form.description.value;
+        const rating = form.rating.value;
+        const photo = form.photo.value;
+
+        const updatedProduct = { name, brand, type, price, description, rating, photo };
+        console.log(updatedProduct);
+
+        fetch(`http://localhost:5000/brands/${_id}`, {
+            method: "PUT",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(updatedProduct)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.modifiedCount > 0) {
+                    setProduct(updatedProduct);
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Product updated successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
+            })
+    }
+
+
     return (
         <div>
             <Navbar></Navbar>
@@ -53,7 +89,92 @@ const Details = () => {
                     <p><span className="font-semibold text-3xl mb-2">{name} | </span> <span className="font-semibold text-xl">Type: {type}</span></p>
                     <p className="font-semibold text-xl">$ {price}</p>
                     <p className="font-semibold text-xl">{rating} ratings</p>
-                    <button onClick={() => handleAddCart(photo, name, price)} className="btn bg-black text-white rounded-sm my-8">Add To Cart</button>
+                    <div className="flex justify-between items-center">
+                        <button onClick={() => handleAddCart(photo, name, price)} className="btn bg-black text-white rounded-sm my-8">Add To Cart</button>
+                        <button className="btn text-black rounded-none" onClick={() => document.getElementById('my_modal_5').showModal()}>Edit</button>
+                    </div>
+                    <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+                        <div className="modal-box">
+                            <h3 className="font-bold text-xl text-center">Update Product</h3>
+                            <div className="modal-action">
+                                <form onSubmit={handleUpdateProduct} className="mx-auto" method="dialog">
+                                    <div className="grid lg:grid-cols-2 gap-5">
+                                        <div>
+                                            <div className="form-control">
+                                                <label className="label">
+                                                    <span className="label-text font-semibold">Name</span>
+                                                </label>
+                                                <label className="input-group">
+                                                    <input type="text" name="name" defaultValue={name} placeholder="Enter product name" className="input rounded-none w-full" />
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div className="form-control">
+                                                <label className="label">
+                                                    <span className="label-text font-semibold">Brand Name</span>
+                                                </label>
+                                                <label className="input-group">
+                                                    <input type="text" name="brand" defaultValue={brand} placeholder="Enter brand name" className="input w-full" />
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div className="form-control">
+                                                <label className="label">
+                                                    <span className="label-text font-semibold">Type</span>
+                                                </label>
+                                                <label className="input-group">
+                                                    <input type="text" name="type" defaultValue={type} placeholder="Enter product type" className="input w-full" />
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div className="form-control">
+                                                <label className="label">
+                                                    <span className="label-text font-semibold">Price</span>
+                                                </label>
+                                                <label className="input-group">
+                                                    <input type="text" name="price" defaultValue={price} placeholder="Enter price" className="input w-full" />
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div className="form-control">
+                                                <label className="label">
+                                                    <span className="label-text font-semibold">Short description</span>
+                                                </label>
+                                                <label className="input-group">
+                                                    <input type="text" name="description" defaultValue={description} placeholder="Enter short description" className="input w-full" />
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div className="form-control">
+                                                <label className="label">
+                                                    <span className="label-text font-semibold">Rating</span>
+                                                </label>
+                                                <label className="input-group">
+                                                    <input type="text" name="rating" defaultValue={rating} placeholder="Enter product rating" className="input w-full" />
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="form-control">
+                                            <label className="label">
+                                                <span className="label-text font-semibold">Image</span>
+                                            </label>
+                                            <label className="input-group">
+                                                <input type="text" name="photo" defaultValue={photo} placeholder="Enter photo URL" className="input w-full" />
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <input type="submit" value="Update Product" className="btn btn-block rounded-none bg-black text-white hover:text-black mt-10" />
+                                </form>
+                            </div>
+                        </div>
+                    </dialog>
                     <div>
                         <div className="flex justify-around  border-2 mb-5">
 

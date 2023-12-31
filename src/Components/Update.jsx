@@ -45,7 +45,7 @@ const Update = () => {
         <div>
             <Navbar></Navbar>
             <div className="bg-[#D2E0FB] py-10 px-10 lg:px-20 mx-3 lg:mx-20 my-10 rounded">
-                <h3 className="text-2xl text-center font-bold my-5 text-red-950">Update Product</h3>
+                <h3 className="text-2xl text-center font-bold my-5">Update Product</h3>
                 <form onSubmit={handleUpdateProduct} className="mx-auto">
                     <div className="grid lg:grid-cols-2 gap-5">
                         <div>

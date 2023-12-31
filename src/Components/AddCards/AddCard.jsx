@@ -21,6 +21,4 @@ const AddCard = ({ c }) => {
     );
 };
 
-{/* <Link to={`/update/${_id}`}><button className="btn">Update</button></Link> */ }
-
 export default AddCard;
