@@ -12,7 +12,7 @@ import Register from './Components/Register/Register.jsx';
 import AuthProvider from './Provider/AuthProvider.jsx';
 import Details from './Components/Details/Details.jsx';
 import MyCart from './Components/MyCart/MyCart.jsx';
-import Update from './Components/Update.jsx';
+// import Update from './Components/Update.jsx';
 import PrivateRoute from './Routes/PrivateRoute.jsx';
 import Popular from './Components/Popular.jsx';
 import 'alpinejs';
@@ -39,11 +39,11 @@ const router = createBrowserRouter([
         element: <PrivateRoute><Details></Details></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/brands/${params.id}`),
       },
-      {
-        path: "/update/:id",
-        element: <PrivateRoute><Update></Update></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/brands/${params.id}`),
-      },
+      // {
+      //   path: "/update/:id",
+      //   element: <PrivateRoute><Update></Update></PrivateRoute>,
+      //   loader: ({ params }) => fetch(`http://localhost:5000/brands/${params.id}`),
+      // },
       {
         path: "/mycart",
         element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
@@ -54,7 +54,7 @@ const router = createBrowserRouter([
         element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>,
       },
       {
-        path: "/popular",
+        path: "/loved",
         element: <Popular></Popular>,
         loader: () => fetch("http://localhost:5000/cart"),
       },

@@ -30,19 +30,14 @@ const Navbar = () => {
         localStorage.setItem("theme", newTheme);
     }
 
-    const navLink = user && user.email === "sa@ra.com" ?
+    const navLink =
         <>
             <li><NavLink className="mr-3" to="/">Home</NavLink></li>
             <li><NavLink className="mr-3" to="/mycart">My Cart</NavLink></li>
-            <li><NavLink className="mr-3" to="/popular">Most loved</NavLink></li>
+            <li><NavLink className="mr-3" to="/loved">Most loved</NavLink></li>
             <li><NavLink className="mr-3" to="/addproduct">Add Product</NavLink></li>
         </>
-        :
-        <>
-            <li><NavLink className="mr-3" to="/">Home</NavLink></li>
-            <li><NavLink className="mr-3" to="/mycart">My Cart</NavLink></li>
-            <li><NavLink className="mr-3" to="/popular">Most loved</NavLink></li>
-        </>
+
 
     return (
         <div>
