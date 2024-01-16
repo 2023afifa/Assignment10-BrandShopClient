@@ -5,4 +5,4 @@ Clicking on each brand you will see some available products like dresses, bags, 
 You will also see the price, rating of each product on the brand page.
 If you want to see some more info like product description you have to login/Register.
 Once you login you can add to cart and can see your cart in the my cart section.
-Client side link: https://brandshop-bdf06.web.app/
+
