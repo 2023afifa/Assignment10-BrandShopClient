@@ -66,8 +66,8 @@ const MyCart = () => {
                         <h3 className="text-center text-3xl text-gray-500 font-medium italic mb-20">Your Cart Is Empty</h3>
                     </>
                     :
-                    <div className="mx-20 mb-20">
-                        <h2 className="text-end text-xl font-medium mb-5">Total Price: ${total}</h2>
+                    <div className="mx-3 md:mx-8 lg:mx-20 mb-20">
+                        <h2 className="lg:text-end text-xl font-medium mb-5">Total Price: ${total}</h2>
                         <div className="overflow-x-auto">
                             <table className="table table-fixed">
                                 <thead>

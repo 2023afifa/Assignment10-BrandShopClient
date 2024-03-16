@@ -8,15 +8,15 @@ const Cart = ({ index, card, handleDelete }) => {
             <th>{index + 1}</th>
             <td>
                 <div className="avatar">
-                    <div className="mask mask-squircle w-16 h-16">
+                    <div className="mask mask-squircle w-10 md:w-16 h-10 md:h-16">
                         <img src={photo} alt="Avatar Tailwind CSS Component" />
                     </div>
                 </div>
             </td>
-            <td>{name}</td>
-            <td>{type}</td>
-            <td>{price}</td>
-            <td><MdDeleteOutline onClick={() => handleDelete(_id)} className="text-xl text-red-700" /></td>
+            <td className="text-xs md:text-base">{name}</td>
+            <td className="text-xs md:text-base">{type}</td>
+            <td className="text-xs md:text-base">{price}</td>
+            <td><MdDeleteOutline onClick={() => handleDelete(_id)} className="text-lg md:text-xl text-red-700" /></td>
         </tr>
     );
 };
