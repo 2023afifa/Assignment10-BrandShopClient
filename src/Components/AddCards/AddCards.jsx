@@ -40,9 +40,7 @@ const AddCards = () => {
         <div>
             <Navbar></Navbar>
             <h2 className="text-4xl text-center font-semibold mt-16 mb-3">{brand}</h2>
-
             <div>
-
                 <div className="bg-black py-5">
                     {
                         brandCard.map(bCard => <div key={bCard.id}>
@@ -73,7 +71,6 @@ const AddCards = () => {
                     }
                 </div>
 
-
                 {
                     card.length === 0 ?
                         <>
@@ -84,7 +81,7 @@ const AddCards = () => {
                         :
                         <>
                             <h3 className="text-3xl text-center font-semibold mt-20">See The Available Products Here</h3>
-                            <div className="grid lg:grid-cols-4 gap-5 m-10">
+                            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 m-10">
                                 {
                                     card.map(c => <AddCard key={c._id} c={c}></AddCard>)
                                 }
@@ -93,7 +90,7 @@ const AddCards = () => {
                 }
 
             </div>
-
+            <Footer></Footer>
         </div>
     );
 };
