@@ -12,10 +12,10 @@ import Register from './Components/Register/Register.jsx';
 import AuthProvider from './Provider/AuthProvider.jsx';
 import Details from './Components/Details/Details.jsx';
 import MyCart from './Components/MyCart/MyCart.jsx';
-// import Update from './Components/Update.jsx';
 import PrivateRoute from './Routes/PrivateRoute.jsx';
-import Popular from './Components/Popular.jsx';
+import Popular from './Components/PopularItems/Popular.jsx';
 import 'alpinejs';
+// import Update from './Components/Update.jsx';
 
 
 
@@ -32,22 +32,22 @@ const router = createBrowserRouter([
       {
         path: "/brands/:brand",
         element: <AddCards></AddCards>,
-        loader: () => fetch("http://localhost:5000/brands"),
+        loader: () => fetch("https://brand-server-nine.vercel.app/brands"),
       },
       {
         path: "/details/:id",
         element: <PrivateRoute><Details></Details></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/brands/${params.id}`),
+        loader: ({ params }) => fetch(`https://brand-server-nine.vercel.app/brands/${params.id}`),
       },
       // {
       //   path: "/update/:id",
       //   element: <PrivateRoute><Update></Update></PrivateRoute>,
-      //   loader: ({ params }) => fetch(`http://localhost:5000/brands/${params.id}`),
+      //   loader: ({ params }) => fetch(`https://brand-server-nine.vercel.app/brands/${params.id}`),
       // },
       {
         path: "/mycart",
         element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-        loader: () => fetch("http://localhost:5000/cart"),
+        loader: () => fetch("https://brand-server-nine.vercel.app/cart"),
       },
       {
         path: "/addproduct",
@@ -56,7 +56,7 @@ const router = createBrowserRouter([
       {
         path: "/loved",
         element: <Popular></Popular>,
-        loader: () => fetch("http://localhost:5000/cart"),
+        loader: () => fetch("https://brand-server-nine.vercel.app/cart"),
       },
       {
         path: "/login",

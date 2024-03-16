@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import Navbar from "./Navbar/Navbar";
+import Navbar from "../Navbar/Navbar";
 import PopularItem from "./PopularItem";
 import { useEffect, useState } from "react";
 
@@ -9,7 +9,7 @@ const Popular = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/brands")
+        fetch("https://brand-server-nine.vercel.app/brands")
             .then(res => res.json())
             .then(data => setItems(data))
     }, [])

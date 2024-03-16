@@ -41,7 +41,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="navbar absolute z-10 bg-transparent px-10 top-0">
+            <div className="navbar absolute z-10 bg-transparent md:px-10 top-0">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -51,7 +51,7 @@ const Navbar = () => {
                             {navLink}
                         </ul>
                     </div>
-                    <a className="text-2xl md:text-4xl font-extrabold ml-2">ClassyCloset</a>
+                    <a className="text-xl md:text-4xl font-extrabold md:ml-2">ClassyCloset</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 font-bold navLink">
@@ -59,18 +59,18 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <input onClick={handleThemeSwitch} type="checkbox" className="toggle mr-3" />
+                    <input onClick={handleThemeSwitch} type="checkbox" className="toggle md:mr-3" />
                     {
                         user ?
                             <>
                                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                                    <div className="w-10 rounded-full">
+                                    <div className="w-8 md:w-10 rounded-full">
                                         <img src={user.photoURL} />
                                     </div>
                                 </label>
-                                <button onClick={handleLogout} className="btn bg-transparent border-none text-lg hover:bg-transparent hover:text-slate-300">Log Out</button>
+                                <button onClick={handleLogout} className="bg-transparent font-medium p-1 md:text-lg hover:bg-transparent hover:text-slate-300">Log Out</button>
                             </>
-                            : <Link to="/login"><button className="btn bg-transparent border-none text-lg hover:bg-transparent hover:text-slate-300">Log In</button></Link>
+                            : <Link to="/login"><button className="btn bg-transparent border-none md:text-lg hover:bg-transparent hover:text-slate-300">Log In</button></Link>
                     }
                 </div>
             </div>

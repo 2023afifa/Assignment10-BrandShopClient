@@ -27,7 +27,7 @@ const Details = () => {
         const newProduct = { name, brand, type, price, description, rating, photo, username, useremail, userphoto };
         console.log(newProduct);
 
-        fetch("http://localhost:5000/cart", {
+        fetch("https://brand-server-nine.vercel.app/cart", {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -56,7 +56,7 @@ const Details = () => {
         const updatedProduct = { name, brand, type, price, description, rating, photo };
         console.log(updatedProduct);
 
-        fetch(`http://localhost:5000/brands/${_id}`, {
+        fetch(`https://brand-server-nine.vercel.app/brands/${_id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"
