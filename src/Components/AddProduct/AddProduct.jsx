@@ -37,7 +37,7 @@ const AddProduct = () => {
                 <div className="bg-slate-50 py-10 px-10 lg:px-20" style={{ opacity: 1 }}>
                     <h3 className="text-2xl text-center font-semibold mb-5">Add Product</h3>
                     <form onSubmit={handleAddProduct} className="mx-auto">
-                        <div className="grid lg:grid-cols-2 gap-5">
+                        <div className="grid md:grid-cols-2 gap-5">
                             <div>
                                 <div className="form-control">
                                     <label className="label">
