@@ -83,7 +83,7 @@ const Details = () => {
         <div>
             <Navbar></Navbar>
             <h2 className="text-3xl text-center font-medium mt-20 mb-8">Product Details</h2>
-            <div className="flex justify-center gap-8 flex-col lg:flex-row mb-10">
+            <div className="flex justify-center gap-8 flex-col lg:flex-row mb-10 mx-5 md:mx-10 lg:mx-0">
                 <img src={photo} alt="" className="lg:w-2/5 lg:h-[450px] rounded p-5 border" />
                 <div className="mt-10">
                     <p><span className="font-semibold text-3xl mb-2">{name} | </span> <span className="font-semibold text-xl">Type: {type}</span></p>
@@ -184,7 +184,7 @@ const Details = () => {
                             <button onClick={() => handleActiveButton('deliveryReturn')} className={activeButton === 'deliveryReturn' ? 'activebutton' : 'inactivebutton'}>Delivery & Return Policy</button>
 
                         </div>
-                        <div className="font-medium text-justify max-w-xl">
+                        <div className="font-medium text-justify lg:max-w-xl">
                             {activeButton === "description" && (
                                 <div>
                                     <p>{description}</p>
