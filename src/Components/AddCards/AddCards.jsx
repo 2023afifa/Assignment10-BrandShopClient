@@ -23,19 +23,6 @@ const AddCards = () => {
     const brandCard = brandCards.filter(brandCard => brandCard.brand === brand);
 
 
-    // if (card.length === 0) {
-    //     return (
-    //         <span>
-    //             <Navbar></Navbar>
-    //             <h2 className="text-4xl text-center font-semibold mt-16 mb-8">{brand}</h2>
-    //             <h3 className="text-center text-2xl">Sorry, No product is available here right now</h3>
-    //             <img className="w-1/2 my-5 mx-auto" src="https://i.ibb.co/wJN6NJV/sorry.jpg" alt="" />
-    //             <Footer></Footer>
-    //         </span>
-    //     )
-    // }
-
-
     return (
         <div>
             <Navbar></Navbar>
