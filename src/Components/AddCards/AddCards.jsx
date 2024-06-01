@@ -15,7 +15,7 @@ const AddCards = () => {
 
 
     useEffect(() => {
-        fetch("/public/brandname.json")
+        fetch("https://brand-server-nine.vercel.app/brandsName")
             .then(res => res.json())
             .then(data => setBrandCards(data))
     }, [])

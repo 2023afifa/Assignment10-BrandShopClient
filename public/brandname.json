@@ -1,6 +1,5 @@
 [
     {
-        "id": 1,
         "brand": "Gucci",
         "brandCover": "https://i.ibb.co/StTQTBT/Gucci-Cover2.jpg",
         "brandImage1": "https://i.ibb.co/wZkXbcN/gucci6.jpg",
@@ -12,7 +11,6 @@
         "brandImage7": "https://i.ibb.co/gyLKJY7/gucci3.jpg"
     },
     {
-        "id": 2,
         "brand": "Prada",
         "brandCover": "https://i.ibb.co/QKL9RNJ/Prada-Cover.jpg",
         "brandImage1": "https://i.ibb.co/Tc41TD6/prada1.jpg",
@@ -24,7 +22,6 @@
         "brandImage7": "https://i.ibb.co/KzKhkLQ/prada5.jpg"
     },
     {
-        "id": 3,
         "brand": "Louis Vuitton",
         "brandCover": "https://i.ibb.co/svP5w8G/LVCover.jpg",
         "brandImage1": "https://i.ibb.co/26L9WWn/lv1.jpg",
@@ -36,7 +33,6 @@
         "brandImage7": "https://i.ibb.co/b3dGqTk/lv3.jpg"
     },
     {
-        "id": 4,
         "brand": "Chanel",
         "brandCover": "https://i.ibb.co/GCBF2GM/Chanel-Cover2.jpg",
         "brandImage1": "https://i.ibb.co/4dtFBNR/chanel5.jpg",
@@ -48,7 +44,6 @@
         "brandImage7": "https://i.ibb.co/XJTm6hV/chanel7.jpg"
     },
     {
-        "id": 5,
         "brand": "Versace",
         "brandCover": "https://i.ibb.co/2NBPzgQ/Versace-Cover2.jpg",
         "brandImage1": "https://i.ibb.co/pzBYjNc/versace1.jpg",
@@ -60,7 +55,6 @@
         "brandImage7": "https://i.ibb.co/R0hb7Bp/Versace-Cover.jpg"
     },
     {
-        "id": 6,
         "brand": "Dior",
         "brandCover": "https://i.ibb.co/zQFdS9h/Dior-Cover.jpg",
         "brandImage1": "https://i.ibb.co/xDvmRFY/dior1.jpg",
@@ -72,7 +66,6 @@
         "brandImage7": "https://i.ibb.co/g4xGY8M/dior7.jpg"
     },
     {
-        "id": 7,
         "brand": "Yves Saint Laurent",
         "brandCover": "https://i.ibb.co/yhr99hv/YSLCover.jpg",
         "brandImage1": "https://i.ibb.co/rfvDHkb/ysl1.jpg",
@@ -84,7 +77,6 @@
         "brandImage7": "https://i.ibb.co/N93FS6K/ysl7.jpg"
     },
     {
-        "id": 8,
         "brand": "Givenchy",
         "brandCover": "https://i.ibb.co/SshtCxc/Givenchy-Cover.jpg",
         "brandImage1": "https://i.ibb.co/p4wZyzd/givenchy1.jpg",
