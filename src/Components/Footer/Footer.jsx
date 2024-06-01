@@ -5,7 +5,7 @@ const Footer = () => {
         <div>
             <footer className="footer footer-center py-28 bg-black text-[#FDF0F0]">
                 <aside>
-                    <img className="w-24 h-24 bg-white rounded-full" src="../../../public/icon.svg" alt="" />
+                    <img className="w-24 h-24 p-3 bg-white rounded-full" src="https://i.ibb.co/7NvvK00/footerlogo.png" alt="" />
                     <p className="font-bold">
                         <span className="text-2xl">ClassyCloset</span> <br />Providing reliable fashion since 2009
                     </p>
